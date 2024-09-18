@@ -11,8 +11,16 @@ public class Test : MonoBehaviour
     }
 
     // Update is called once per frame
+    void FixedUpdate()
+    {
+        Debug.Log("Hello From FixedUpdate");
+    }
     void Update()
     {
         Debug.Log("Hello From Update");
+    }
+    private void OnEnable()
+    {
+        Debug.Log("Hello From OnEnable");
     }
 }
