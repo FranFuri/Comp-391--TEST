@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class Player : MonoBehaviour
     private float horizontalInput, verticalInput;
     public int speed;
     Vector2 newVelocity;
+    public GameObject missile;
 
     // Start is called before the first frame update
     void Start()
@@ -27,5 +29,18 @@ public class Player : MonoBehaviour
         newVelocity.y = verticalInput;
 
         GetComponent<Rigidbody2D>().velocity = newVelocity * speed;
+
+        bool fireMissile = Input.GetButton("Fire1");
+        if (fireMissile)
+        {
+            //create a copy of the missile gameobject
+            Instantiate(missile, 
+                position: new Vector3(transform.position.x, y:transform.position.y + 1f, z:0f),
+                Quaternion.identity);
+            
+        }
     }
-}
+
+        }
+    
+

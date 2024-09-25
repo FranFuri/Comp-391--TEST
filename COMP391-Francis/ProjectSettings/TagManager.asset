@@ -38,6 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 4151646443
+    locked: 0
+  - name: Fighter 4
+    uniqueID: 2348689027
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
